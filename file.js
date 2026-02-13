@@ -25,3 +25,11 @@ fs.cp("./cse-c.txt","b.txt",(err)=>{
         }
 })
 
+fs.unlink("./cse-c.txt",(err)=>{
+    if(err){
+        console.log("error",err);
+    }else{
+        console.log("delete successful");
+    }
+});
+
