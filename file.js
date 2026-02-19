@@ -17,19 +17,31 @@ const fs = require("fs");
 
 // fs.appendFileSync("./cse-c.txt",`is good college`);
 
-fs.cp("./cse-c.txt","b.txt",(err)=>{
-        if(err){
-            console.log("error",err)
-        }else{
-            console.log("copy successful");
-        }
-})
+// fs.cp("./cse-c.txt","b.txt",(err)=>{
+//         if(err){
+//             console.log("error",err)
+//         }else{
+//             console.log("copy successful");
+//         }
+// })
 
-fs.unlink("./cse-c.txt",(err)=>{
-    if(err){
-        console.log("error",err);
-    }else{
-        console.log("delete successful");
-    }
-});
+// fs.unlink("./cse-c.txt",(err)=>{
+//     if(err){
+//         console.log("error",err);
+//     }else{
+//         console.log("delete successful");
+//     }
+// });
 
+
+const os= require('os');
+
+console.log("platfrom", os.platform());
+console.log("userinfo",os.userInfo());
+console.log("cpu",os.arch())
+
+console.log("total memory", os.totalmem())
+console.log("")
+console.log("uptime",os.uptime())
+console.log("home directory",os.homedir())
+console.log("host time",os.hostname() )
